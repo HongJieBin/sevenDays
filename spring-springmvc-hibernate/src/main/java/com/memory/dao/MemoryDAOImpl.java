@@ -2,7 +2,6 @@ package com.memory.dao;
 
 import com.memory.pojo.Memory;
 import org.hibernate.annotations.DynamicInsert;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +19,7 @@ import javax.annotation.Resource;
 @Repository
 @Transactional
 public class MemoryDAOImpl implements MemoryDAO {
-    @Autowired
+    @Resource
     private HibernateTemplate hibernateTemplate;
 
     @Override

@@ -60,14 +60,30 @@ public class User {
 
     @OneToMany(mappedBy = "user",targetEntity = Memory.class)
     @Cascade(CascadeType.DELETE)
-    private Set<Memory> memories = new HashSet<>();
+    private Set<Memory> memories = new HashSet<>();     //用户十字记忆记录表
 
     @ManyToMany(targetEntity = Tag.class)
     @Fetch(FetchMode.JOIN)
     @JoinTable(name = "user_tag",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id"))
-    private Set<Tag> tags = new HashSet<Tag>();
+    private Set<Tag> tags = new HashSet<Tag>();     //用户标签表
+
+    @OneToMany(mappedBy = "user", targetEntity = Ban.class)
+    @Cascade(CascadeType.DELETE)
+    private Set<Ban> banHistory = new HashSet<Ban>();   //封禁记录表
+
+    @OneToMany(mappedBy = "user", targetEntity = Drift.class)
+    @Cascade(CascadeType.DELETE)
+    private Set<Drift> drifts = new HashSet<Drift>();   //漂流瓶表
+
+    @OneToMany(mappedBy = "user", targetEntity = Chatroom.class)
+    @Cascade(CascadeType.DELETE)
+    private Set<Chatroom> chatrooms = new HashSet<Chatroom>();   //漂流瓶表
+
+    @OneToMany(mappedBy = "user", targetEntity = Post.class)
+    @Cascade(CascadeType.DELETE)
+    private Set<Post> posts = new HashSet<Post>();   //动态表
 
     public int getUserId() {
         return userId;

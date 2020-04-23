@@ -31,8 +31,8 @@ public class Memory {
     @Column(name = "memory_content", nullable = false, length = 100)
     private String memoryContent;
 
-    @Column(name = "memory_date", nullable = true)
-    private Timestamp memoryDate = new Timestamp(new Date().getTime());
+    @Column(name = "memory_date", nullable = false)
+    private Timestamp memoryDate;
 
     //memory的发布用户
 

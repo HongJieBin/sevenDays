@@ -1,46 +1,43 @@
 package com.memory.dao;
 
-import com.memory.pojo.Memory;
-import com.memory.pojo.Msg;
-import com.memory.pojo.Tag;
+import com.memory.pojo.Post;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
-
 /**
- * @ClassName MemoryDAOImpl
+ * @ClassName PostDAOImpl
  * @Description TODO
- * @Author Hkb
+ * @Author SupreacyXXXXX
  * @Date 2020/4/23
  * @Version 1.0
  **/
 
 @Repository
 @Transactional
-public class MsgDAOImpl implements MsgDAO{
+public class PostDAOImpl implements PostDAO{
     @Resource
     private HibernateTemplate hibernateTemplate;
 
     @Override
-    public void add(Msg msg) {
-        hibernateTemplate.save(msg);
+    public void add(Post post) {
+        hibernateTemplate.save(post);
     }
 
     @Override
-    public void update(Msg msg) {
-        hibernateTemplate.update(msg);
+    public void update(Post post) {
+        hibernateTemplate.update(post);
     }
 
     @Override
-    public void delete(Msg msg) {
-        hibernateTemplate.delete(msg);
+    public void delete(Post post) {
+        hibernateTemplate.delete(post);
     }
 
     @Override
-    public Msg get(int id) {
-        return hibernateTemplate.get(Msg.class, id);
+    public Post get(int id) {
+        return hibernateTemplate.get(Post.class, id);
     }
 }

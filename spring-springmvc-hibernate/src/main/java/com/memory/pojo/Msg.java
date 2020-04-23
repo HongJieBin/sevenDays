@@ -1,6 +1,8 @@
 package com.memory.pojo;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
