@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="spring-springmvc-hibernate:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afa5ab33-c3e0-4c66-a118-93fea42eb4ed" name="Default Changelist" comment="项目基本结构">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/19b6f5a9-dbe9-4507-bff5-ff67cd6e73ac.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/19b6f5a9-dbe9-4507-bff5-ff67cd6e73ac/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-springmvc-hibernate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/memory/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/memory/dao/PersonDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/memory/pojo/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/memory/service/PerosonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/appliciationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db-mysql.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-springmvc-hibernate.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/appliciationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/memory/controller/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/memory/dao/PersonDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/memory/pojo/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/memory/service/PerosonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/persistence-mysql.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring-dao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/META-INF/spring-springmvc-hibernate.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/appliciationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/com/memory/controller/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/com/memory/dao/PersonDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/com/memory/pojo/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/com/memory/service/PerosonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/persistence-mysql.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/spring-dao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/classes/spring-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/jsp/hello.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/classmate-1.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/dom4j-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/druid-1.1.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/fastjson-1.2.62.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/hibernate-core-5.2.17.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/jandex-2.0.3.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/javassist-3.22.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/jboss-logging-3.3.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/mysql-connector-java-8.0.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-aop-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-beans-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-context-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-core-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-expression-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-jcl-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-jdbc-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-orm-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-tx-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-web-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/lib/spring-webmvc-5.1.14.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/spring-springmvc-hibernate/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/myTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssmbuild@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssmbuild@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssmbuild@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ssmbuild: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ssmbuild@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ssmbuild: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="person: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\devinstall\MyRepository" />
+        <option name="mavenHome" value="C:/devinstall/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\devinstall\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ak05w46tSeNvjqfKwotAIv8ih0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\软件工程\sevenDays\spring-springmvc-hibernate\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.myTest.testSave">
+    <configuration name="myTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-springmvc-hibernate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="myTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myTest.testCOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-springmvc-hibernate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="myTest" />
+      <option name="METHOD_NAME" value="testCOn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-springmvc-hibernate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="myTest" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.30" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/spring/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="spring-springmvc-hibernate:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/spring" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_spring-springmvc-hibernate" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="14133" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="spring-springmvc-hibernate:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.myTest" />
+      <item itemvalue="JUnit.myTest.testCOn" />
+      <item itemvalue="JUnit.myTest.testSave" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.30" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.myTest.testSave" />
+        <item itemvalue="JUnit.myTest" />
+        <item itemvalue="JUnit.myTest.testCOn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afa5ab33-c3e0-4c66-a118-93fea42eb4ed" name="Default Changelist" comment="" />
+      <created>1587264104057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587264104057</updated>
+      <workItem from="1587264107595" duration="14054000" />
+      <workItem from="1587452746209" duration="634000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目基本结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目基本结构" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="452" y="101" key="#Assign_Data_Sources" timestamp="1587295102045">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="101" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1587295102045" />
+    <state x="362" y="0" key="#Project_Structure" timestamp="1587452763435">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1587452763435" />
+    <state x="452" y="101" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1587302086756" />
+    <state x="552" y="176" width="1211" height="693" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587302012438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="176" width="1211" height="693" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587302012438" />
+    <state x="721" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1587301783457">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587301783457" />
+    <state x="627" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587294995214">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587294995214" />
+    <state x="689" y="223" key="FileChooserDialogImpl" timestamp="1587275372257">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="223" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587275372257" />
+    <state width="1282" height="323" key="GridCell.Tab.0.bottom" timestamp="1587302141427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141427" />
+    <state width="1282" height="323" key="GridCell.Tab.0.center" timestamp="1587302141427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141427" />
+    <state width="1282" height="323" key="GridCell.Tab.0.left" timestamp="1587302141427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141427" />
+    <state width="1282" height="323" key="GridCell.Tab.0.right" timestamp="1587302141427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141427" />
+    <state width="1282" height="323" key="GridCell.Tab.1.bottom" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.1.center" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.1.left" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.1.right" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.2.bottom" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.2.center" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.2.left" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state width="1282" height="323" key="GridCell.Tab.2.right" timestamp="1587302141428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1282" height="323" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587302141428" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587453319133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587453319133" />
+    <state x="844" y="402" width="428" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587298345851">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="844" y="402" width="428" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1587298345851" />
+    <state x="6" y="161" key="new project wizard" timestamp="1587275381741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="6" y="161" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587275381741" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587452858059">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587452858059" />
+    <state x="523" y="145" key="spring file set editor" timestamp="1587265107588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="523" y="145" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1587265107588" />
+  </component>
+</project>
