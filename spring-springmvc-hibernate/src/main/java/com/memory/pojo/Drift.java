@@ -22,6 +22,7 @@ import java.util.Set;
 @DynamicInsert
 public class Drift {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bottle_id")
     private int bottleId;
 

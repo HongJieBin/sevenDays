@@ -20,6 +20,7 @@ import java.util.Objects;
 @DynamicInsert
 public class Ban {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ban_id")
     private int banId;
 

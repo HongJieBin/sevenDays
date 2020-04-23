@@ -19,6 +19,7 @@ import java.util.Objects;
 @DynamicInsert
 public class Bug {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bug_id")
     private int bugId;
 

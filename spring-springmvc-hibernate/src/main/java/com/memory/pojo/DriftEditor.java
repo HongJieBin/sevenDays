@@ -20,6 +20,7 @@ import java.util.Objects;
 @DynamicInsert
 public class DriftEditor {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "edit_id")
     private int editId;
 

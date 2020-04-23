@@ -19,6 +19,7 @@ import java.util.Objects;
 @DynamicInsert
 public class Admin {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "admin_id")
     private int adminId;
 
