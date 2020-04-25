@@ -14,5 +14,6 @@ public interface TagDAO {
     void update(Tag tag);
     void delete(Tag tag);
     Tag get(int id);
+    Tag getByName(String name);
 
 }

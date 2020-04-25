@@ -40,4 +40,10 @@ public class TagDAOImpl implements TagDAO{
     public Tag get(int id) {
         return hibernateTemplate.get(Tag.class, id);
     }
+
+
+    @Override
+    public Tag getByName(String name) {
+        return (Tag)hibernateTemplate.find("from tag as t where t.tag_name = ?",name);
+    }
 }
