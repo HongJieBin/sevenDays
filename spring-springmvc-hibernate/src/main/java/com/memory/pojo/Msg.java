@@ -12,7 +12,7 @@ import java.util.Objects;
  * @ClassName Msg
  * @Description TODO
  * @Author SupreacyXXXXX Hkb
- * @Date 2020/4/21
+ * @Date 2020/4/25
  * @Version 1.1
  **/
 
@@ -30,6 +30,9 @@ public class Msg {
     private String msgContent;
     @Column(name = "msg_datetime", nullable = false)
     private Timestamp msgDatetime;
+
+    @Column(name = "msg_action")
+    private int msgAction;
 
     @OneToOne(targetEntity = User.class)
     @JoinColumn(name = "send_id")
@@ -79,6 +82,14 @@ public class Msg {
 
     public void setMsgDatetime(Timestamp msgDatetime) {
         this.msgDatetime = msgDatetime;
+    }
+
+    public int getMsgAction() {
+        return msgAction;
+    }
+
+    public void setMsgAction(int msgAction) {
+        this.msgAction = msgAction;
     }
 
     @Override

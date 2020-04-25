@@ -16,6 +16,7 @@ import java.util.Objects;
 
 
 @Entity
+@Table(name = "post")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
