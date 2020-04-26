@@ -1,14 +1,13 @@
 package com.memory.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.memory.pojo.Bug;
 import com.memory.service.BugService;
 import com.memory.utils.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/bug")
@@ -17,11 +16,22 @@ public class BugController {
     @Autowired
     private static BugService bugService;
 
-    @RequestMapping(value = "/feedback",method = RequestMethod.POST)
-    public JsonResult feedback(@RequestParam(value = "userId")Integer uid, @RequestParam(value = "content")String content){
+    /**
+     * Bug反馈
+     * @param uid
+     * @param content
+     * @return
+     */
+    @RequestMapping(value = "/feedback")
+    public @ResponseBody JsonResult feedback(@RequestBody String body){
+        JSONObject json = JSONObject.parseObject(body);
         Bug bug = new Bug();
-        bug.setBugContent(content);
-        bugService.save(bug);
+        bug.setBugContent(json.getString("content"));
+        try {
+            bugService.save(bug);
+        }catch (Exception e){
+            return JsonResult.build(1000,"请求参数错误","");
+        }
         return JsonResult.ok();
     }
 }

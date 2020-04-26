@@ -1,6 +1,7 @@
 package com.memory.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.memory.dao.TagDAO;
 import com.memory.pojo.Tag;
 import com.memory.pojo.User;
@@ -12,9 +13,7 @@ import com.memory.utils.JsonResult;
 import com.memory.utils.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -35,26 +34,29 @@ public class UserController {
 
 
     @RequestMapping(value = "/modifyInformation", method = RequestMethod.POST)
-    public JsonResult modifyInformation (@RequestParam(value = "userId")Integer uid,
-                                         @RequestParam(value = "nickname")String nickname,
-                                         @RequestParam(value = "image",required = false)String image,
-                                         @RequestParam(value = "gender")String gender,
-                                         @RequestParam(value = "profile",required = false)String profile){
-        User u = userService.get(uid);
-        u.setNickname(nickname);
-        if (image != null)
-            u.setIcon(image);
-        u.setGender(gender);
-        if (profile != null)
-            u.setProfile(profile);
+    public @ResponseBody JsonResult modifyInformation (@RequestBody String body){
+        JSONObject json = JSONObject.parseObject(body);
+        User u = userService.get(json.getInteger("userId"));
+        u.setNickname(json.getString("nickname"));
+        if (json.getString("image") != null || json.getString("image").length()!=0 )
+            u.setIcon(json.getString("image"));
+        u.setGender(json.getString("gender"));
+        if (json.getString("profile") != null || json.getString("profile").length() != 0 )
+            u.setProfile(json.getString("profile"));
         userService.update(u);
         return JsonResult.ok();
     }
 
     @RequestMapping(value = "/pastTag" , method = RequestMethod.GET)
-    public JsonResult pastTag(@RequestParam(value = "userId")Integer uid){
+    public @ResponseBody JsonResult pastTag(@RequestBody  String body){
+        JSONObject json = JSONObject.parseObject(body);
         List<String> tagList = new LinkedList<>();
-        List<UserTag> list = userTagService.getByUserId(uid);
+        List<UserTag> list = null;
+        try {
+            list = userTagService.getByUserId(json.getInteger("userId"));
+        }catch (Exception e){
+            return JsonResult.build(1000,"args error","");
+        }
         for(UserTag ut:list){
             Tag t = tagService.get(ut.getTagId());
             tagList.add(t.getTagName());
@@ -63,8 +65,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/setThisWeekTag" , method = RequestMethod.POST)
-    public JsonResult setThisWeekTag(@RequestParam(value = "userId")Integer uid,
-                                     @RequestParam(value = "tag",required = false)String tag){
+    public @ResponseBody JsonResult setThisWeekTag(@RequestBody String body){
+        JSONObject json = JSONObject.parseObject(body);
+        Integer uid = json.getInteger("userId");
         User u = userService.get(uid);
         String lastTag = u.getThisWeekTag();
         String[] lastTagList = lastTag.split(",");
@@ -82,12 +85,15 @@ public class UserController {
                 userTagService.update(ut);
             }
         }
+        u.setThisWeekTag(json.getString("tag"));
+        userService.update(u);
         return JsonResult.ok();
     }
 
     @RequestMapping(value = "/getThisTags",method = RequestMethod.POST)
-    public JsonResult getThisTags(@RequestParam(value = "userId") Integer uid){
-        User u = userService.get(uid);
+    public @ResponseBody JsonResult getThisTags(@RequestBody String body){
+        JSONObject json = JSONObject.parseObject(body);
+        User u = userService.get(json.getInteger("userId"));
         String tags = u.getThisWeekTag();
         String[] list = tags.split(",");
         return JsonResult.ok(list);
