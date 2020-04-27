@@ -1,0 +1,12 @@
+/target
+*.pdf
+*.class
+*.xml
+*.jar
+*.jsp
+/utils
+*.propertise
+*.MF
+*.war
+.idea
+target
