@@ -41,12 +41,12 @@ public class FriendDAOImpl implements FriendDAO{
     @Override
     public List<Friend> getByUserID(int userId) {
         String hql = "from Friend as f where f.userId = ?";
-        return (List<Friend>) hibernateTemplate.find(hql);
+        return (List<Friend>) hibernateTemplate.find(hql, userId);
     }
 
     @Override
     public List<Friend> getByAddedID(int addedId) {
         String hql = "from Friend as f where f.addedId = ?";
-        return (List<Friend>) hibernateTemplate.find(hql);
+        return (List<Friend>) hibernateTemplate.find(hql, addedId);
     }
 }
