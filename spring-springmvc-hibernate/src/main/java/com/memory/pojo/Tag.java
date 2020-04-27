@@ -22,10 +22,10 @@ import java.util.Set;
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id")
+    @Column(name = "tagId")
     private int tagId;
 
-    @Column(name = "tag_name", nullable = false, length = 20)
+    @Column(name = "tagName", nullable = false, length = 20)
     private String tagName;
 
     @ManyToMany(targetEntity = User.class,

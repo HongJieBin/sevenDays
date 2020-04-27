@@ -41,12 +41,12 @@ public class BlacklistDAOImpl implements BlacklistDAO{
     @Override
     public List<Blacklist> getByUserID(int id) {
         String hql = "from Blacklist as b where b.userId = ?";
-        return (List<Blacklist>) hibernateTemplate.find(hql);
+        return (List<Blacklist>) hibernateTemplate.find(hql, id);
     }
 
     @Override
     public List<Blacklist> getByAddedID(int id) {
         String hql = "from Blacklist as b where b.addedId = ?";
-        return (List<Blacklist>) hibernateTemplate.find(hql);
+        return (List<Blacklist>) hibernateTemplate.find(hql, id);
     }
 }

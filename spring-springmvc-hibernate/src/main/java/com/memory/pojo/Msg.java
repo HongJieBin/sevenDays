@@ -39,6 +39,18 @@ public class Msg {
     @JoinColumn(name = "receive_id")
     private User receiveUser;
 
+    @Override
+    public String toString() {
+        return "Msg{" +
+                "msgId=" + msgId +
+                ", msgContent='" + msgContent + '\'' +
+                ", msgDatetime=" + msgDatetime +
+                ", msgAction=" + msgAction +
+                ", sendUser=" + sendUser +
+                ", receiveUser=" + receiveUser +
+                '}';
+    }
+
     public int getMsgId() {
         return msgId;
     }
