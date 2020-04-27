@@ -19,7 +19,7 @@ import java.util.Random;
 public class TagController {
 
     @Autowired
-    private static TagService tagService;
+    private TagService tagService;
 
     @RequestMapping(value = "/getTag",method = RequestMethod.GET)
     public @ResponseBody String getTag(){

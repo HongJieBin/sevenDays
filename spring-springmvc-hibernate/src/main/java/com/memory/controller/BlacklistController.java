@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class BlacklistController {
 
     @Autowired
-    private static BlacklistService blacklistService;
+    private BlacklistService blacklistService;
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public @ResponseBody String add(@RequestBody String body){

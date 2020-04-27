@@ -25,13 +25,13 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private static UserService userService;
+    private UserService userService;
 
     @Autowired
-    private static UserTagService userTagService;
+    private UserTagService userTagService;
 
     @Autowired
-    private static TagService tagService;
+    private TagService tagService;
 
 
     @RequestMapping(value = "/modifyInformation", method = RequestMethod.POST)

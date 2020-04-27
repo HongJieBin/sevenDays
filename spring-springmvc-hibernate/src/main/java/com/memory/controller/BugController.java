@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class BugController {
 
     @Autowired
-    private static BugService bugService;
+    private BugService bugService;
 
     /**
      * Bug反馈
