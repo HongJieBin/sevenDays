@@ -12,5 +12,6 @@
 </head>
 <body>
     ${msg}
+    <a href="/hello">hello</a>
 </body>
 </html>

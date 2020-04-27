@@ -9,5 +9,8 @@
         <module name="spring-springmvc-hibernate" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-springmvc-hibernate" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

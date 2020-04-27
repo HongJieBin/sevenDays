@@ -10,6 +10,7 @@ import com.memory.service.TagService;
 import com.memory.service.UserService;
 import com.memory.service.UserTagService;
 import com.memory.utils.JsonResult;
+import com.memory.utils.JsonUtils;
 import com.memory.utils.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,7 @@ public class UserController {
 
 
     @RequestMapping(value = "/modifyInformation", method = RequestMethod.POST)
-    public @ResponseBody JsonResult modifyInformation (@RequestBody String body){
+    public @ResponseBody String modifyInformation (@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
         User u = userService.get(json.getInteger("userId"));
         u.setNickname(json.getString("nickname"));
@@ -44,28 +45,28 @@ public class UserController {
         if (json.getString("profile") != null || json.getString("profile").length() != 0 )
             u.setProfile(json.getString("profile"));
         userService.update(u);
-        return JsonResult.ok();
+        return JsonUtils.toJSON(JsonResult.ok());
     }
 
     @RequestMapping(value = "/pastTag" , method = RequestMethod.GET)
-    public @ResponseBody JsonResult pastTag(@RequestBody  String body){
+    public @ResponseBody String pastTag(@RequestBody  String body){
         JSONObject json = JSONObject.parseObject(body);
         List<String> tagList = new LinkedList<>();
         List<UserTag> list = null;
         try {
             list = userTagService.getByUserId(json.getInteger("userId"));
         }catch (Exception e){
-            return JsonResult.build(1000,"args error","");
+            return JsonUtils.toJSON(JsonResult.build(1000,"args error",""));
         }
         for(UserTag ut:list){
             Tag t = tagService.get(ut.getTagId());
             tagList.add(t.getTagName());
         }
-        return JsonResult.ok(tagList);
+        return JsonUtils.toJSON(JsonResult.ok(tagList));
     }
 
     @RequestMapping(value = "/setThisWeekTag" , method = RequestMethod.POST)
-    public @ResponseBody JsonResult setThisWeekTag(@RequestBody String body){
+    public @ResponseBody String setThisWeekTag(@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
         Integer uid = json.getInteger("userId");
         User u = userService.get(uid);
@@ -87,17 +88,15 @@ public class UserController {
         }
         u.setThisWeekTag(json.getString("tag"));
         userService.update(u);
-        return JsonResult.ok();
+        return JsonUtils.toJSON(JsonResult.ok());
     }
 
     @RequestMapping(value = "/getThisTags",method = RequestMethod.POST)
-    public @ResponseBody JsonResult getThisTags(@RequestBody String body){
+    public @ResponseBody String getThisTags(@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
         User u = userService.get(json.getInteger("userId"));
         String tags = u.getThisWeekTag();
         String[] list = tags.split(",");
-        return JsonResult.ok(list);
+        return JsonUtils.toJSON(JsonResult.ok(list));
     }
-
-
 }

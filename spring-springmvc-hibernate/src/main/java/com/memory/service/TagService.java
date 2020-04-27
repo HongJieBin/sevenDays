@@ -6,6 +6,8 @@ import com.memory.pojo.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TagService {
 
@@ -24,5 +26,9 @@ public class TagService {
 
     public Tag getByTagName(String name){
         return tagDAO.getByName(name);
+    }
+
+    public List<Tag> getAll(){
+        return tagDAO.getAll();
     }
 }
