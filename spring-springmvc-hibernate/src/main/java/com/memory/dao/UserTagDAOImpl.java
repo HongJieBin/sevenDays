@@ -19,11 +19,11 @@ public class UserTagDAOImpl implements UserTagDAO{
 
     @Override
     public List<UserTag> getByUserId(Integer uid) {
-        return (List< UserTag>)hibernateTemplate.find("form user_tag as u where u.user_id = ?",uid);
+        return (List< UserTag>)hibernateTemplate.find("form UserTag as u where u.user_id = ?",uid);
     }
 
     public UserTag get(Integer uid , Integer tid){
-        List<UserTag> list = (List<UserTag>)hibernateTemplate.find("form user_tag as u where u.user_id = ? and u.tag_id = ?",
+        List<UserTag> list = (List<UserTag>)hibernateTemplate.find("form UserTag as u where u.user_id = ? and u.tag_id = ?",
                 new Object[]{uid,tid});
         if(list.size() == 0)
             return null;

@@ -21,20 +21,24 @@ public class TagController {
     @Autowired
     private TagService tagService;
 
+
+    /**
+     * 获取标签，上限为十个，随机选取
+     * @return
+     */
     @RequestMapping(value = "/getTag",method = RequestMethod.GET)
     public @ResponseBody String getTag(){
-        System.out.println("方法执行。。。");
         Random random = new Random();
         List<Tag> list;
-        try {
+        try {           //get all tags
             list = tagService.getAll();
         }catch (Exception e){
             return JsonUtils.toJSON(JsonResult.errorException("查询异常"));
         }
-        if(list.size() <= 10)
+        if(list.size() <= 10)                   //if all tags less than ten return all
             return JsonUtils.toJSON(JsonResult.ok(list));
         List<Tag> returnList = new LinkedList<>();
-        for(int i = 0 ; i < 10 ; i++){
+        for(int i = 0 ; i < 10 ; i++){                                      //else randomly return ten tags
             returnList.add(list.get(random.nextInt()%list.size()));
         }
         return JsonUtils.toJSON(JsonResult.ok(returnList));

@@ -3,19 +3,19 @@ package com.memory.pojo;
 
 import org.hibernate.annotations.ColumnDefault;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "user_tag")
+@IdClass(UserTagPK.class)
 public class UserTag {
 
-
+    @Id
     @Column(name = "user_id")
     private Integer userId;
 
+    @Id
     @Column(name = "tag_id")
     private Integer tagId;
 

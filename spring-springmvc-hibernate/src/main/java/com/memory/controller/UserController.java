@@ -12,6 +12,8 @@ import com.memory.service.UserTagService;
 import com.memory.utils.JsonResult;
 import com.memory.utils.JsonUtils;
 import com.memory.utils.SpringUtils;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -33,21 +35,42 @@ public class UserController {
     @Autowired
     private TagService tagService;
 
-
+    /**
+     * 修改个人信息
+     * @param body
+     * @return
+     */
     @RequestMapping(value = "/modifyInformation", method = RequestMethod.POST)
     public @ResponseBody String modifyInformation (@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
-        User u = userService.get(json.getInteger("userId"));
+        User u;
+        try {
+            u = userService.get(json.getInteger("userId"));
+        }catch (Exception e){
+            return JsonUtils.toJSON(JsonResult.errorException("查询错误"));
+        }
+        if( u ==null ){                         //can not find the user
+            return JsonUtils.toJSON(JsonResult.errorMsg("找不到该用户：uid= "+json.getInteger("userId").toString()));
+        }
         u.setNickname(json.getString("nickname"));
         if (json.getString("image") != null || json.getString("image").length()!=0 )
             u.setIcon(json.getString("image"));
         u.setGender(json.getString("gender"));
         if (json.getString("profile") != null || json.getString("profile").length() != 0 )
             u.setProfile(json.getString("profile"));
-        userService.update(u);
+        try {
+            userService.update(u);
+        }catch (Exception e){
+            return JsonUtils.toJSON(JsonResult.errorException("修改错误"));
+        }
         return JsonUtils.toJSON(JsonResult.ok());
     }
 
+    /**
+     * 获取过去标签
+     * @param body
+     * @return
+     */
     @RequestMapping(value = "/pastTag" , method = RequestMethod.GET)
     public @ResponseBody String pastTag(@RequestBody  String body){
         JSONObject json = JSONObject.parseObject(body);
@@ -65,14 +88,24 @@ public class UserController {
         return JsonUtils.toJSON(JsonResult.ok(tagList));
     }
 
+    /**
+     * 设置本周标签
+     * @param body
+     * @return
+     */
     @RequestMapping(value = "/setThisWeekTag" , method = RequestMethod.POST)
     public @ResponseBody String setThisWeekTag(@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
         Integer uid = json.getInteger("userId");
-        User u = userService.get(uid);
+        User u;
+        try {
+            u = userService.get(uid);               //查找User
+        }catch (Exception e){
+            return JsonUtils.toJSON(JsonResult.errorException("查询错误"));
+        }
         String lastTag = u.getThisWeekTag();
         String[] lastTagList = lastTag.split(",");
-        for(String s: lastTagList){
+        for(String s: lastTagList){                     //update UserTag chart
             Tag t = tagService.getByTagName(s);
             UserTag ut = userTagService.get(uid,t.getTagId());
             if (ut == null){
@@ -86,15 +119,29 @@ public class UserController {
                 userTagService.update(ut);
             }
         }
-        u.setThisWeekTag(json.getString("tag"));
-        userService.update(u);
+        try {
+            u.setThisWeekTag(json.getString("tag"));            //update user.thisWeekTag
+            userService.update(u);
+        }catch (Exception e){
+            return JsonUtils.toJSON(JsonResult.errorException("服务器错误"));
+        }
         return JsonUtils.toJSON(JsonResult.ok());
     }
 
+    /**
+     * 获取本周标签
+     * @param body
+     * @return
+     */
     @RequestMapping(value = "/getThisTags",method = RequestMethod.POST)
     public @ResponseBody String getThisTags(@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
-        User u = userService.get(json.getInteger("userId"));
+        User u;
+        try {
+            u = userService.get(json.getInteger("userId"));
+        }catch (Exception e){
+            return JsonUtils.toJSON(JsonResult.errorException("查询错误"));
+        }
         String tags = u.getThisWeekTag();
         String[] list = tags.split(",");
         return JsonUtils.toJSON(JsonResult.ok(list));

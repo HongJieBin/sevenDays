@@ -25,7 +25,7 @@ public class BugController {
     public @ResponseBody String feedback(@RequestBody String body){
         JSONObject json = JSONObject.parseObject(body);
         Bug bug = new Bug();
-        bug.setBugContent(json.getString("content"));
+        bug.setBugContent(json.getString("content"));                   //build bug object
         try {
             bugService.save(bug);
         }catch (Exception e){
@@ -34,8 +34,12 @@ public class BugController {
         return JsonUtils.toJSON(JsonResult.ok());
     }
 
+    /**
+     * 测试方法
+     * @return
+     */
     @RequestMapping(value = "/bug")
-    public String bug(){
+    public @ResponseBody String bug(){
         System.out.println("test method");
         return JsonUtils.toJSON(JsonResult.ok());
     }
