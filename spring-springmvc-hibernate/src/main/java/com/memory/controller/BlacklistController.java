@@ -20,17 +20,14 @@ public class BlacklistController {
 
     /**
      * 将用户添加到黑名单中
-     * @param body
+     * @param
      * @return
      */
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public @ResponseBody String add(@RequestBody String body){
-        JSONObject json = JSONObject.parseObject(body);
-        Integer uid = json.getInteger("userId");
-        Integer addId = json.getInteger("addedId");
+    public @ResponseBody String add(int userId,int addedId){
         Blacklist blacklist;
         try {
-            blacklist = blacklistService.get(uid, addId);
+            blacklist = blacklistService.get(userId,addedId);
         }catch (Exception e){
             return JsonUtils.toJSON(JsonResult.errorException("查询错误"));
         }
@@ -38,8 +35,8 @@ public class BlacklistController {
             return JsonUtils.toJSON(JsonResult.build(1000,"请求参数错误","该用户已在你的黑名单中"));
         else{
             blacklist = new Blacklist();
-            blacklist.setUserId(uid);
-            blacklist.setAddedId(addId);
+            blacklist.setUserId(userId);
+            blacklist.setAddedId(addedId);
             try {
                 blacklistService.add(blacklist);
             }catch (Exception e){
@@ -51,17 +48,14 @@ public class BlacklistController {
 
     /**
      * 从黑名单中移除
-     * @param body
+     * @param
      * @return
      */
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
-    public @ResponseBody String delete(@RequestBody String body){
-        JSONObject json = JSONObject.parseObject(body);
-        Integer uid = json.getInteger("userId");
-        Integer deleteId = json.getInteger("deleteId");
+    public @ResponseBody String delete(int userId,int deleteId){
         Blacklist blacklist;
         try {
-            blacklist = blacklistService.get(uid, deleteId);
+            blacklist = blacklistService.get(userId, deleteId);
         }catch (Exception e){
             return JsonUtils.toJSON(JsonResult.errorException("服务器错误"));
         }

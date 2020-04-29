@@ -22,10 +22,9 @@ public class BugController {
      * @return
      */
     @RequestMapping(value = "/feedback")
-    public @ResponseBody String feedback(@RequestBody String body){
-        JSONObject json = JSONObject.parseObject(body);
+    public @ResponseBody String feedback(int userId,String content){
         Bug bug = new Bug();
-        bug.setBugContent(json.getString("content"));                   //build bug object
+        bug.setBugContent(content);                   //build bug object
         try {
             bugService.save(bug);
         }catch (Exception e){
