@@ -21,7 +21,7 @@ public class PersonDao {
      * @return
      */
 
-    @Transactional(readOnly = false)
+    @Transactional
     public void save(Person p) {
 //        sessionFactory.getCurrentSession().save(p);
         sessionFactory.getCurrentSession().save(p);
@@ -32,6 +32,7 @@ public class PersonDao {
      * @param userName 用户名
      * @return Person
      */
+    @Transactional
     public Person getPersonByUserName(String userName) {
         return (Person)sessionFactory.getCurrentSession().createQuery("from Person where userName = ?")
                 .setParameter(0, userName).uniqueResult();
